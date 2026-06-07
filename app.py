@@ -112,6 +112,9 @@ fichas = load_json("fichas_tecnicas.json")["platos"]
 equipo = load_json("equipo.json")
 
 ARS = lambda v: f"${v:,.0f}".replace(",", ".")
+# En textos markdown puros, "$" se interpreta como delimitador de fórmula (LaTeX);
+# esta variante escapa el signo para que se muestre literal cuando hay varios montos en una línea.
+ARS_md = lambda v: ARS(v).replace("$", r"\$")
 
 # ------------------------------------------------------------
 # Tablas derivadas — se calculan una vez y se reutilizan en los
@@ -182,8 +185,8 @@ for col, (label, value, sub, tone) in zip(kpi_cols, kpis):
                             f"{ARS(resumen_fin['costos_ocultos_estimados'])}?**")
                 st.caption("Los 5 días del mes con mayor desvío entre el costo real y el costo objetivo (32%):")
                 for _, d in peores_dias.iterrows():
-                    st.markdown(f"- Hace **{d['hace_dias']} días** → costo real {ARS(d['costos'])} "
-                                f"vs. objetivo {ARS(d['costo_objetivo'])} · brecha de **{ARS(d['brecha'])}**")
+                    st.markdown(f"- Hace **{d['hace_dias']} días** → costo real {ARS_md(d['costos'])} "
+                                f"vs. objetivo {ARS_md(d['costo_objetivo'])} · brecha de **{ARS_md(d['brecha'])}**")
                 st.caption("El sistema marca estos picos apenas ocurren — no hace falta esperar al cierre de mes para verlos.")
 
             elif label.startswith("Productos en riesgo"):
