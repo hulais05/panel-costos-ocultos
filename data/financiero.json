@@ -2,190 +2,190 @@
   "dias": [
     {
       "hace_dias": 30,
-      "ingresos": 509300,
-      "costos": 184500,
+      "ingresos": 2910600,
+      "costos": 1119861,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 29,
-      "ingresos": 451600,
-      "costos": 171600,
+      "ingresos": 3400800,
+      "costos": 1431407,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 28,
-      "ingresos": 524700,
-      "costos": 220800,
+      "ingresos": 3097500,
+      "costos": 1232721,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 27,
-      "ingresos": 549300,
-      "costos": 202000,
+      "ingresos": 3322000,
+      "costos": 1347011,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 26,
-      "ingresos": 474800,
-      "costos": 172200,
+      "ingresos": 3291800,
+      "costos": 1377584,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 25,
-      "ingresos": 442600,
-      "costos": 179500,
+      "ingresos": 2702700,
+      "costos": 1116307,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 24,
-      "ingresos": 412200,
-      "costos": 155800,
+      "ingresos": 3009800,
+      "costos": 1301810,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 23,
-      "ingresos": 510900,
-      "costos": 209000,
+      "ingresos": 2736000,
+      "costos": 1023245,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 22,
-      "ingresos": 442900,
-      "costos": 182900,
+      "ingresos": 3315200,
+      "costos": 1221144,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 21,
-      "ingresos": 536200,
-      "costos": 193300,
+      "ingresos": 3891800,
+      "costos": 1612510,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 20,
-      "ingresos": 535600,
-      "costos": 226500,
+      "ingresos": 2959200,
+      "costos": 1208125,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 19,
-      "ingresos": 461900,
-      "costos": 172700,
+      "ingresos": 3356100,
+      "costos": 1374939,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 18,
-      "ingresos": 559600,
-      "costos": 218400,
+      "ingresos": 3041100,
+      "costos": 1330644,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 17,
-      "ingresos": 422700,
-      "costos": 155900,
+      "ingresos": 2332800,
+      "costos": 849429,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 16,
-      "ingresos": 542200,
-      "costos": 224700,
+      "ingresos": 3202800,
+      "costos": 1176008,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 15,
-      "ingresos": 535800,
-      "costos": 228100,
+      "ingresos": 3110800,
+      "costos": 1197713,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 14,
-      "ingresos": 492900,
-      "costos": 220600,
+      "ingresos": 2620800,
+      "costos": 1030803,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 13,
-      "ingresos": 468000,
-      "costos": 191700,
+      "ingresos": 3223900,
+      "costos": 1432375,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 12,
-      "ingresos": 539400,
-      "costos": 224200,
+      "ingresos": 2500900,
+      "costos": 938844,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 11,
-      "ingresos": 544500,
-      "costos": 224300,
+      "ingresos": 2871000,
+      "costos": 1131607,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 10,
-      "ingresos": 519600,
-      "costos": 189200,
+      "ingresos": 3576000,
+      "costos": 1466609,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 9,
-      "ingresos": 444100,
-      "costos": 171400,
+      "ingresos": 2403000,
+      "costos": 1032906,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 8,
-      "ingresos": 420600,
-      "costos": 160200,
+      "ingresos": 3040000,
+      "costos": 1180708,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 7,
-      "ingresos": 424000,
-      "costos": 163200,
+      "ingresos": 3088800,
+      "costos": 1374089,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 6,
-      "ingresos": 508700,
-      "costos": 199800,
+      "ingresos": 3161000,
+      "costos": 1324426,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 5,
-      "ingresos": 466600,
-      "costos": 176800,
+      "ingresos": 2422500,
+      "costos": 972141,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 4,
-      "ingresos": 450300,
-      "costos": 200100,
+      "ingresos": 3098700,
+      "costos": 1272088,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 3,
-      "ingresos": 510600,
-      "costos": 211800,
+      "ingresos": 3187800,
+      "costos": 1405195,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 2,
-      "ingresos": 435100,
-      "costos": 185200,
+      "ingresos": 2824400,
+      "costos": 1270354,
       "costo_objetivo_pct": 0.32
     },
     {
       "hace_dias": 1,
-      "ingresos": 433900,
-      "costos": 171000,
+      "ingresos": 2820000,
+      "costos": 1027158,
       "costo_objetivo_pct": 0.32
     }
   ],
   "resumen_30_dias": {
-    "total_ingresos": 14570600,
-    "total_costos": 5787400,
+    "total_ingresos": 90519800,
+    "total_costos": 36779761,
     "costo_objetivo_pct": 0.32,
-    "costo_real_pct": 0.3972,
-    "costos_ocultos_estimados": 1124808
+    "costo_real_pct": 0.4063,
+    "costos_ocultos_estimados": 7813425
   }
 }
