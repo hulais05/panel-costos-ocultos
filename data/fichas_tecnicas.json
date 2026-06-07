@@ -1,0 +1,12 @@
+{
+  "platos": [
+    {"nombre": "Bife de lomo c/ guarnición", "tiene_ficha": true,  "costo_teorico": 8200,  "costo_real": 8350,  "precio_venta": 21000, "margen_objetivo": 0.60},
+    {"nombre": "Salmón grillado c/ vegetales", "tiene_ficha": true,  "costo_teorico": 11400, "costo_real": 12950, "precio_venta": 24500, "margen_objetivo": 0.55},
+    {"nombre": "Milanesa napolitana", "tiene_ficha": false, "costo_teorico": 6100,  "costo_real": 8400,  "precio_venta": 15800, "margen_objetivo": 0.60},
+    {"nombre": "Ensalada César c/ pollo", "tiene_ficha": false, "costo_teorico": 3800,  "costo_real": 5650,  "precio_venta": 11200, "margen_objetivo": 0.65},
+    {"nombre": "Risotto de hongos", "tiene_ficha": true,  "costo_teorico": 4900,  "costo_real": 5100,  "precio_venta": 13500, "margen_objetivo": 0.62},
+    {"nombre": "Hamburguesa premium", "tiene_ficha": false, "costo_teorico": 5200,  "costo_real": 7300,  "precio_venta": 14000, "margen_objetivo": 0.58},
+    {"nombre": "Tiradito de langostinos", "tiene_ficha": true,  "costo_teorico": 9100,  "costo_real": 9450,  "precio_venta": 19800, "margen_objetivo": 0.55},
+    {"nombre": "Tarta de frutos rojos", "tiene_ficha": false, "costo_teorico": 2600,  "costo_real": 4150,  "precio_venta": 8900,  "margen_objetivo": 0.65}
+  ]
+}

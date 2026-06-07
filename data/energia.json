@@ -1,0 +1,15 @@
+{
+  "zonas": [
+    {"nombre": "Pasillo de depósito", "tipo": "Iluminación", "estado": "Encendida", "actividad": "Sin movimiento hace 4h 20min", "alerta": true, "costo_estimado_mensual": 8400},
+    {"nombre": "Salón principal (turno tarde)", "tipo": "Iluminación", "estado": "Encendida", "actividad": "En uso — normal", "alerta": false, "costo_estimado_mensual": 0},
+    {"nombre": "Cámara frigorífica #2", "tipo": "Refrigeración", "estado": "Puerta abierta 11 min", "actividad": "Recuperando temperatura desde +6°C", "alerta": true, "costo_estimado_mensual": 15600},
+    {"nombre": "Cámara frigorífica #1", "tipo": "Refrigeración", "estado": "Cerrada", "actividad": "Temperatura estable -2°C", "alerta": false, "costo_estimado_mensual": 0},
+    {"nombre": "Baños (sector clientes)", "tipo": "Iluminación", "estado": "Encendida", "actividad": "Sin movimiento hace 2h 10min", "alerta": true, "costo_estimado_mensual": 3200},
+    {"nombre": "Cocina caliente", "tipo": "Equipos", "estado": "Hornos en stand-by", "actividad": "Encendidos fuera de horario de servicio", "alerta": true, "costo_estimado_mensual": 11800}
+  ],
+  "resumen": {
+    "alertas_activas": 4,
+    "costo_estimado_mensual_total": 39000,
+    "costo_estimado_anual": 468000
+  }
+}

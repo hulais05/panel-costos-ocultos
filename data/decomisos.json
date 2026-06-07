@@ -1,0 +1,14 @@
+{
+  "registros": [
+    {"hace_dias": 1, "producto": "Lechuga mantecosa", "cantidad": "2 kg", "motivo": "Vencimiento", "costo_estimado": 1800, "declarado": false},
+    {"hace_dias": 2, "producto": "Salmón rosado", "cantidad": "1.4 kg", "motivo": "Mal almacenamiento (cadena de frío)", "costo_estimado": 13720, "declarado": false},
+    {"hace_dias": 3, "producto": "Pan de hamburguesa", "cantidad": "18 u", "motivo": "Sobreproducción", "costo_estimado": 5400, "declarado": true},
+    {"hace_dias": 4, "producto": "Tomate perita", "cantidad": "3 kg", "motivo": "Vencimiento", "costo_estimado": 3300, "declarado": false},
+    {"hace_dias": 5, "producto": "Milanesas de pollo", "cantidad": "2.2 kg", "motivo": "Error de cocción / devolución", "costo_estimado": 7040, "declarado": false},
+    {"hace_dias": 6, "producto": "Langostinos", "cantidad": "0.8 kg", "motivo": "Vencimiento", "costo_estimado": 9200, "declarado": false},
+    {"hace_dias": 8, "producto": "Crema de leche", "cantidad": "4 L", "motivo": "Apertura sin rotular / vencida", "costo_estimado": 8400, "declarado": false},
+    {"hace_dias": 10, "producto": "Frutos rojos", "cantidad": "1.5 kg", "motivo": "Vencimiento", "costo_estimado": 7200, "declarado": false},
+    {"hace_dias": 12, "producto": "Lomo de res", "cantidad": "0.9 kg", "motivo": "Rotura de cadena de frío", "costo_estimado": 5850, "declarado": true},
+    {"hace_dias": 15, "producto": "Palta", "cantidad": "2 kg", "motivo": "Sobremaduración / sobrestock", "costo_estimado": 4800, "declarado": false}
+  ]
+}

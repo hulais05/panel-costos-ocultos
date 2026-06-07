@@ -1,0 +1,15 @@
+{
+  "mozos": [
+    {"nombre": "Carla R.", "antiguedad_meses": 14, "conocimiento_menu": 0.88, "ultima_capacitacion_dias": 12},
+    {"nombre": "Nahuel G.", "antiguedad_meses": 2,  "conocimiento_menu": 0.41, "ultima_capacitacion_dias": 60},
+    {"nombre": "Brisa M.", "antiguedad_meses": 7,  "conocimiento_menu": 0.63, "ultima_capacitacion_dias": 35},
+    {"nombre": "Tomás L.", "antiguedad_meses": 1,  "conocimiento_menu": 0.35, "ultima_capacitacion_dias": 60},
+    {"nombre": "Yamila S.", "antiguedad_meses": 22, "conocimiento_menu": 0.92, "ultima_capacitacion_dias": 12},
+    {"nombre": "Ezequiel P.", "antiguedad_meses": 3,  "conocimiento_menu": 0.48, "ultima_capacitacion_dias": 60}
+  ],
+  "resumen": {
+    "rotacion_anual_estimada": 0.74,
+    "promedio_antiguedad_meses": 8.2,
+    "promedio_conocimiento_menu": 0.61
+  }
+}

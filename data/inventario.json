@@ -1,0 +1,19 @@
+{
+  "productos": [
+    {"id": "p01", "nombre": "Lomo de res", "categoria": "Proteínas", "cantidad": 8, "unidad": "kg", "dias_restantes": 1, "costo_unitario": 6500, "ingreso_hace_dias": 4},
+    {"id": "p02", "nombre": "Salmón rosado", "categoria": "Proteínas", "cantidad": 5, "unidad": "kg", "dias_restantes": 2, "costo_unitario": 9800, "ingreso_hace_dias": 3},
+    {"id": "p03", "nombre": "Pechuga de pollo", "categoria": "Proteínas", "cantidad": 12, "unidad": "kg", "dias_restantes": 4, "costo_unitario": 3200, "ingreso_hace_dias": 2},
+    {"id": "p04", "nombre": "Lechuga mantecosa", "categoria": "Vegetales", "cantidad": 6, "unidad": "kg", "dias_restantes": 1, "costo_unitario": 900, "ingreso_hace_dias": 5},
+    {"id": "p05", "nombre": "Tomate perita", "categoria": "Vegetales", "cantidad": 10, "unidad": "kg", "dias_restantes": 3, "costo_unitario": 1100, "ingreso_hace_dias": 3},
+    {"id": "p06", "nombre": "Palta", "categoria": "Vegetales", "cantidad": 4, "unidad": "kg", "dias_restantes": 2, "costo_unitario": 2400, "ingreso_hace_dias": 4},
+    {"id": "p07", "nombre": "Crema de leche", "categoria": "Lácteos", "cantidad": 9, "unidad": "L", "dias_restantes": 6, "costo_unitario": 2100, "ingreso_hace_dias": 1},
+    {"id": "p08", "nombre": "Queso mozzarella", "categoria": "Lácteos", "cantidad": 7, "unidad": "kg", "dias_restantes": 9, "costo_unitario": 4300, "ingreso_hace_dias": 2},
+    {"id": "p09", "nombre": "Manteca", "categoria": "Lácteos", "cantidad": 3, "unidad": "kg", "dias_restantes": 14, "costo_unitario": 3600, "ingreso_hace_dias": 6},
+    {"id": "p10", "nombre": "Harina 0000", "categoria": "Secos", "cantidad": 25, "unidad": "kg", "dias_restantes": 90, "costo_unitario": 850, "ingreso_hace_dias": 12},
+    {"id": "p11", "nombre": "Arroz doble carolina", "categoria": "Secos", "cantidad": 18, "unidad": "kg", "dias_restantes": 120, "costo_unitario": 1050, "ingreso_hace_dias": 20},
+    {"id": "p12", "nombre": "Vino tinto Malbec", "categoria": "Bebidas", "cantidad": 14, "unidad": "botellas", "dias_restantes": 365, "costo_unitario": 5200, "ingreso_hace_dias": 30},
+    {"id": "p13", "nombre": "Cerveza artesanal IPA", "categoria": "Bebidas", "cantidad": 22, "unidad": "botellas", "dias_restantes": 200, "costo_unitario": 1800, "ingreso_hace_dias": 8},
+    {"id": "p14", "nombre": "Langostinos", "categoria": "Proteínas", "cantidad": 3, "unidad": "kg", "dias_restantes": 1, "costo_unitario": 11500, "ingreso_hace_dias": 4},
+    {"id": "p15", "nombre": "Frutos rojos", "categoria": "Vegetales", "cantidad": 2, "unidad": "kg", "dias_restantes": 1, "costo_unitario": 4800, "ingreso_hace_dias": 3}
+  ]
+}
