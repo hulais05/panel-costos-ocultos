@@ -113,6 +113,19 @@ equipo = load_json("equipo.json")
 
 ARS = lambda v: f"${v:,.0f}".replace(",", ".")
 
+# ------------------------------------------------------------
+# Tablas derivadas — se calculan una vez y se reutilizan en los
+# KPIs (popovers de detalle) y en cada pestaña.
+# ------------------------------------------------------------
+df_fin = pd.DataFrame(financiero["dias"]).sort_values("hace_dias", ascending=False)
+df_fin["día"] = df_fin["hace_dias"].apply(lambda d: f"-{d}d")
+df_fin["costo_objetivo"] = df_fin["ingresos"] * df_fin["costo_objetivo_pct"]
+df_fin["brecha"] = df_fin["costos"] - df_fin["costo_objetivo"]
+
+df_inv = pd.DataFrame(inventario).sort_values("dias_restantes")
+df_dec = pd.DataFrame(decomisos)
+no_declarados = df_dec[~df_dec["declarado"]]
+
 # ============================================================
 # HEADER + KPIs GLOBALES
 # ============================================================
@@ -136,6 +149,10 @@ total_decomisos = sum(d["costo_estimado"] for d in decomisos)
 decomisos_no_declarados = sum(1 for d in decomisos if not d["declarado"])
 energia_resumen = energia["resumen"]
 
+productos_en_riesgo = df_inv[df_inv["dias_restantes"] <= 2]
+zonas_con_alerta = [z for z in energia["zonas"] if z["alerta"]]
+peores_dias = df_fin.sort_values("brecha", ascending=False).head(5)
+
 kpi_cols = st.columns(4)
 kpis = [
     ("Costos ocultos detectados (30 días)", ARS(resumen_fin["costos_ocultos_estimados"]),
@@ -148,16 +165,50 @@ kpis = [
      f"{energia_resumen['alertas_activas']} zonas con consumo fuera de horario", "warn"),
 ]
 for col, (label, value, sub, tone) in zip(kpi_cols, kpis):
-    col.markdown(
-        f"""
-        <div class="kpi-card">
-            <p class="kpi-label">{label}</p>
-            <p class="kpi-value">{value}</p>
-            <p class="kpi-sub {tone}">{sub}</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    with col:
+        st.markdown(
+            f"""
+            <div class="kpi-card">
+                <p class="kpi-label">{label}</p>
+                <p class="kpi-value">{value}</p>
+                <p class="kpi-sub {tone}">{sub}</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        with st.popover("🔎 Ver detalle", use_container_width=True):
+            if label.startswith("Costos ocultos"):
+                st.markdown("**¿De dónde sale esta brecha de "
+                            f"{ARS(resumen_fin['costos_ocultos_estimados'])}?**")
+                st.caption("Los 5 días del mes con mayor desvío entre el costo real y el costo objetivo (32%):")
+                for _, d in peores_dias.iterrows():
+                    st.markdown(f"- Hace **{d['hace_dias']} días** → costo real {ARS(d['costos'])} "
+                                f"vs. objetivo {ARS(d['costo_objetivo'])} · brecha de **{ARS(d['brecha'])}**")
+                st.caption("El sistema marca estos picos apenas ocurren — no hace falta esperar al cierre de mes para verlos.")
+
+            elif label.startswith("Productos en riesgo"):
+                st.markdown(f"**{len(productos_en_riesgo)} productos** que se vencen hoy o mañana "
+                            "y todavía no se usaron:")
+                for _, p in productos_en_riesgo.iterrows():
+                    st.markdown(f"- **{p['nombre']}** — {p['cantidad']} {p['unidad']} · "
+                                f"vence en {p['dias_restantes']} día(s) · valor {ARS(p['cantidad']*p['costo_unitario'])}")
+                st.caption("La recomendación de uso (orden FIFO) está en la pestaña 📦 Inventario & FIFO.")
+
+            elif label.startswith("Decomisos"):
+                st.markdown(f"**{len(no_declarados)} de {len(df_dec)} pérdidas** que el sistema detectó "
+                            "cruzando stock contra ventas — y que nadie cargó como decomiso:")
+                for _, d in no_declarados.sort_values("costo_estimado", ascending=False).head(6).iterrows():
+                    st.markdown(f"- **{d['producto']}** — {d['cantidad']} · {d['motivo']} · "
+                                f"costo estimado {ARS(d['costo_estimado'])} (hace {d['hace_dias']} días)")
+                st.caption("El detalle completo, con el motivo de cada pérdida, está en la pestaña 🗑️ Decomisos.")
+
+            else:  # Energía desperdiciada
+                st.markdown(f"**{len(zonas_con_alerta)} zonas** consumiendo energía fuera de horario "
+                            "o sin necesidad real:")
+                for z in zonas_con_alerta:
+                    st.markdown(f"- **{z['nombre']}** ({z['tipo']}) — {z['actividad']} · "
+                                f"sobrecosto estimado {ARS(z['costo_estimado_mensual'])}/mes")
+                st.caption("Con sensores de movimiento y temperatura, el sistema corrige esto automáticamente — sin esperar a que alguien lo note.")
 
 st.write("")
 
@@ -181,10 +232,6 @@ tab_resumen, tab_inventario, tab_decomisos, tab_energia, tab_fichas, tab_equipo 
 # ------------------------------------------------------------
 with tab_resumen:
     st.subheader("¿Cuánto debería costar tu operación vs. cuánto te está costando?")
-
-    df_fin = pd.DataFrame(financiero["dias"]).sort_values("hace_dias", ascending=False)
-    df_fin["día"] = df_fin["hace_dias"].apply(lambda d: f"-{d}d")
-    df_fin["costo_objetivo"] = df_fin["ingresos"] * df_fin["costo_objetivo_pct"]
 
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=df_fin["día"], y=df_fin["ingresos"], name="Ingresos",
@@ -221,7 +268,6 @@ with tab_inventario:
     st.subheader("¿Qué tenés, dónde está y qué hay que usar primero?")
     st.caption("Orden automático por fecha de vencimiento — así nunca más se pierde algo por no saber qué había.")
 
-    df_inv = pd.DataFrame(inventario).sort_values("dias_restantes")
     valor_total = (df_inv["cantidad"] * df_inv["costo_unitario"]).sum()
     en_riesgo = df_inv[df_inv["dias_restantes"] <= 2]
     valor_en_riesgo = (en_riesgo["cantidad"] * en_riesgo["costo_unitario"]).sum()
@@ -265,8 +311,7 @@ with tab_inventario:
 with tab_decomisos:
     st.subheader("Lo que se tira también es plata — y casi nunca queda registrado")
 
-    df_dec = pd.DataFrame(decomisos)
-    no_decl = df_dec[~df_dec["declarado"]]
+    no_decl = no_declarados
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Pérdida total estimada (30 días)", ARS(df_dec["costo_estimado"].sum()))
