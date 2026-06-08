@@ -1,8 +1,8 @@
 # Panel de Costos Ocultos — Demo
 
 Prototipo navegable de un **sistema autónomo de control para gastronomía**, construido
-como respuesta directa a la publicación de Felix Viana (Grupo Viana) sobre los 10 puntos
-críticos de "costos ocultos" en restaurantes.
+como respuesta directa a una publicación de LinkedIn sobre los 10 puntos críticos de
+"costos ocultos" en restaurantes.
 
 La idea: en vez de comentar "totalmente de acuerdo 👏", mostrar — con un panel funcionando —
 cómo se vería cada uno de esos 10 puntos resuelto en un sistema único, navegable, con datos

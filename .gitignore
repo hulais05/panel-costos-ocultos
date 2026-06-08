@@ -37,5 +37,10 @@ build/
 .env.local
 *.local
 
+# Seguimiento personal de leads/prospectos (contactos, conversaciones privadas)
+# — nunca debe ir a un repo público
+pitch/seguimiento_*.md
+*.xlsx
+
 # Preview / cache
 .cache/
